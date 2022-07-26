@@ -1,5 +1,4 @@
 console.log('masuk');
-const url = 'https://api.adviceslip.com/advice';
 
 // async function getApi(url){
 //     const response = await fetch(url);
@@ -11,18 +10,29 @@ const url = 'https://api.adviceslip.com/advice';
 //     }
 // }
 
-function getApi(url) {
-    fetch(url)
+function getApi(e) {
+    
+    fetch('https://api.adviceslip.com/advice')
     .then((res) => {
         return res.json()
     })
     .then((data) => {
       console.log(data);
-      let advices = data;
-      advices.map(function(advice){
-        document.querySelector('.advice-id').innerHTML = `${advice.id}`;
-        document.querySelector('.col p').innerHTML = `${advice.advice}`;
+      var advices = Object.keys(data).map(function(key){
+        
+        return data[key];
       });
+      console.log(advices);
+      console.log(typeof(advices));
+      console.log(advices[0].id);
+      console.log(advices[0].advice);
+      document.querySelector('.advice-id').innerHTML = `#${advices[0].id}`;
+      document.querySelector('.col p').innerHTML = `${advices[0].advice}`;
+    //   let advices = JSON.stringify(data);
+    //   for(let key in advices){
+    //     console.log(`obj.${key} = ${advices[key]}`);
+    //   }
+    
     //   data.forEach(function(advice){
     //     let id = `${advice.id}`;
     //     let advice = `${advice.advice}`
@@ -31,13 +41,8 @@ function getApi(url) {
     //     document.querySelector('.col p').textContent(advice);
     })
     .catch(err => console.log(err));
+    e.preventDefault();
   }
 
-getApi(url);
+getApi();
 
-// function showData(data){
-//     data.forEach(function(advice){
-//         document.querySelector('.advice-id').textContent(advice.id);
-//     });
-    
-// }
