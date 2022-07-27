@@ -1,0 +1,26 @@
+@media all and (min-width:768px){
+    .col{
+        max-width: 540px;
+        margin: auto;
+        padding: 50px 47px;
+        padding-bottom: 72px;
+    }
+    
+    .container{
+        padding-top: 223px;
+        padding-bottom: 253px;
+    }
+
+    .desktop-hide{
+        display: none;
+    }
+
+    .mobile-hide{
+        display: block;
+    }
+
+    h1,p{
+        margin-bottom: 30px;
+    }
+
+}
