@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/vanilla-js-fetch-api-mobile-first-layout-dHt3bEd0Oq](https://www.frontendmentor.io/solutions/vanilla-js-fetch-api-mobile-first-layout-dHt3bEd0Oq)
 - Live Site URL: [https://madegilangaditya.github.io/advice-generator-app-main/](https://madegilangaditya.github.io/advice-generator-app-main/)
 
 ## My process
